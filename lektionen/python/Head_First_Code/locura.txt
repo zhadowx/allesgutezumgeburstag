@@ -1,0 +1,26 @@
+def save_list (correct, wrong):
+	file = open("Answers.txt", "a")
+	file.write("Correct: %s \n Wrong: %s  " % (correct,wrong))
+	file.close() 
+
+running = True
+items=["Correct", "Wrong"]
+
+while running:
+	option = 1
+	for choice in items:
+		print("A questiosn has been asked!")
+		
+		choice = int(input("Choose: "))
+
+
+	if choice == 0:
+		running = False
+
+	else:
+		if choice == 1:
+			correct = 
+			sound = panparanpaaan
+		else:
+			wrong = 1
+			sound = penpenpenpeeen

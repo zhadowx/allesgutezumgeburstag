@@ -1,0 +1,20 @@
+number_asked = 0 
+number_correct = 0
+number_wrong = 0
+
+ask the host to press 1 for correct, 2 for incorrect, or 0 
+to end while the host response is not 0
+
+if host response was 1:
+	add 1 to number_asked
+	add 1 to number_correct
+	play a sound effect
+if host response was 2:
+	add 1 to number_asked
+	add 1 to number_wrong
+	play a sound effect
+ask the host to press 1 for correct, 2 for incorrect, or 0
+to end
+
+Display the values of number_asked, number_correct and 
+number_wrong on screen
