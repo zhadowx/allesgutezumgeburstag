@@ -1,0 +1,7 @@
+README.txt
+lsearch.py
+setup.py
+lsearch.egg-info/PKG-INFO
+lsearch.egg-info/SOURCES.txt
+lsearch.egg-info/dependency_links.txt
+lsearch.egg-info/top_level.txt
