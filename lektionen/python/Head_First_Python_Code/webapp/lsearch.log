@@ -1,0 +1,4 @@
+ImmutableMultiDict([('phrase', 'klk tu dice palomon'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36|['a', 'e', 'i', 'o', 'u']
+ImmutableMultiDict([('phrase', 'tu no da la luz'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36|['a', 'o', 'u']
+ImmutableMultiDict([('phrase', 'activate '), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0|['a', 'e', 'i']
+ImmutableMultiDict([('phrase', 'palomon'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0|['a', 'o']
