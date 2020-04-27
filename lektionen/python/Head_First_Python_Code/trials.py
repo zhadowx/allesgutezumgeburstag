@@ -1,3 +1,3 @@
 import html
 
-print(html.unescape("I &hearts; Python's &lt;standard library&gt;."))
+print(html.unescape("&#208;&epsilon;&tau;&#114;&ouml;&igrave;&tau;"))
