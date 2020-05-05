@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, escape, session
+from flask import Flask, session
 from checker import check_logged_in
 
 
@@ -8,12 +8,8 @@ app.secret_key = 'biberon'
 
 @app.route('/login')
 def do_login() -> str:
-  user_pass = input('Input password: ')
-  if user_pass == app.secret_key:
-    session['logged_in'] = True
-    return 'You are now logged in.'
-  return 'Wrong password'
-  do_login()  
+  session['logged_in'] = True
+  return 'You are now logged in.'
 
 
 @app.route('/logout')
