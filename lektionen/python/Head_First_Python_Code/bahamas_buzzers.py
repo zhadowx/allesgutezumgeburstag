@@ -16,17 +16,17 @@ with open('buzzers.csv') as data:
 
 pprint.pprint(flights)
 print()
-
 # flights2 = {}
 # for k, v in flights.items():
 #   flights2[convert2ampm(k)] = v.title()
-
-# pprint.pprint(flights2)
 more_flights = {convert2ampm(k): v.title() for k, v in flights.items()}
-
 pprint.pprint(more_flights)
 print()
-
-
-just_freeport = {convert2ampm(k): v.title() for k, v in flights.items() if v=='FREEPORT'}
-pprint.pprint(just_freeport)
+# just_freeport = {convert2ampm(k): v.title() for k, v in flights.items() if v=='FREEPORT'}
+dests = set(more_flights.values())
+# when = {}
+# for dest in dests:
+#   when[dest] = [k for k,v in more_flights.items() if v==dest]
+when = {dest: [k for k,v in more_flights.items() if v == dest] for dest in dests}
+pprint.pprint(when)
+print()
