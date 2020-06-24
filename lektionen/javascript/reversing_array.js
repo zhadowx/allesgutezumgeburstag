@@ -19,6 +19,7 @@ function reverseArray(arr) {
 function reverseArrayInPlace(arr) {
   for (element of arr.slice()) {
     arr.unshift(element);
+    arr.pop();
   } 
   return arr;
 }
