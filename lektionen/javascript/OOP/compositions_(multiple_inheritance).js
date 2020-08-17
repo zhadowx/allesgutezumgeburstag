@@ -264,13 +264,43 @@ var AngryCatAlien = function(nickName, age, fullName, initialScore, x, y, number
 
 var AngryCatWizard = function(nickName, age, fullName, initialScore, x, y, spellPower) {
   var wizard = new AngryCat(nickName, age, fullName, initialScore, x, y);
-  alien.createWizard(spellPower);
+  wizard.createWizard(spellPower);
   return wizard;
 }
 
 var AngryCatKnight = function(nickName, age, fullName, initialScore, x, y, swordPower, swordHeight) {
   var knight = new AngryCat(nickName, age, fullName, initialScore, x, y);
-  alien.createKnight(swordPower, swordHeight);
+  knight.createKnight(swordPower, swordHeight);
   return knight;
 }
 
+//Working with instances composed of many objects
+
+var angryDog1 = new AngryDog("Brian");
+var angryDog2 = new AngryDog("Merlin");
+
+angryDog1.drawSpeechBalloon("Hello, my name is " + angryDog1.nickName);
+angryDog1.drawSpeechBalloon("How do you do?", angryDog2);
+angryDog2.drawThoughtBalloon("Who are you? I think.");
+
+var angryCat1 = new AngryCat("Garfield", 10, "Mr. Garfield", 0, 10, 20);
+angryCat1.drawSpeechBalloon("Hello, my name is " + angryCat1.nickName);
+angryDog1.drawSpeechBalloon("Hello, " + angryCat1.nickName, angryCat1);
+
+var alien1 = AngryCatAlien("Alien", 120, "Mr. Alien", 0, 10, 20, 3);
+if (alien1.isIntersectingWith(angryCat1)) {
+  alien1.move(angryCat1.x + 20, angryCat1.y + 20);
+}
+alien1.appear();
+
+var wizard1 = new AngryCatWizard("Gandalf", 75, "Mr. Gandalf", 10000, 30, 40, 100);
+wizard1.draw(wizard1.x, wizard1.y);
+wizard1.disappearAlien(alien1);
+alien1.appear();
+
+var knight1 = new AngryCatKnight("Camelot", 35, "Sir Camelot", 5000, 50, 50, 100, 30);
+knight1.draw(knight1.x, knight1.y);
+knight1.unsheathSword(alien1);
+
+alien1.drawThoughtBalloon("I must be friendly or I'm dead...");
+alien1.drawSpeechBalloon("Pleased to meet you, Sir.", knight1);
